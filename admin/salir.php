@@ -4,52 +4,38 @@ session_start();
 
 <!DOCTYPE html>
 <html lang="es">
-<img src="">
-	<head>
-		<meta charset ="utf-8">
-		<title>Cierre de sesion</title>
-	</head>
-	<style type="text/css">
-	*{
-		margin: 0 auto;
-		text-align: center;
-		font-family: Roboto, sans-serif;
-	}
-		a{
-			padding: 25px;
-			background-color: #0099FF;
-			text-decoration: none;
-			color: white;
-		}
-		div{
-			padding: 25px;
-			margin: 25px;
-			
-		}
-		img{
-			width: 200px;
-		}
-	</style>
+<head>
+<meta charset ="utf-8">
+<title>Cierre de sesion</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../css/admin.css" media="screen">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+	
 <body>
 
-<section>
-</section>
 <section id="main">
+
 <?php
+
 if (isset($_SESSION['MiSession'])) {
 session_destroy();
 
-echo "<img src='../images/cierredesesion.jpg'>";
-echo "<div>";
-echo "Se ha destruido sesion exitosamente<br/>";
+echo "<img id='imgCierreSesion' src=\"../images/cierredesesion.jpg\">";
+echo "<div class='mensajeDestroy'>";
+echo "Se ha destruido exitosamente la sesión<br/>";
 echo "</div>";
-echo "<a href='index.php'>Volver</a>";
-}else{
-	echo "<div>";
+echo "<a class='enlaceVolver' href='../index.html'>Volver</a>";
+}
+
+else{
+echo "<div class='mensajeDestroy'>";
 echo "ERROR... <br/>";
 echo "</div>";
 
-echo "<a href='index.php'>Volver</a>";
+echo "<a class='enlaceVolver' href='../index.html'>Volver</a>";
 }
 
 ?>

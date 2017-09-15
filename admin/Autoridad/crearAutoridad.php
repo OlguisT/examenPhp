@@ -95,7 +95,7 @@ echo "<div class='form-group'>";
      echo "</div>";
 echo "</form>";
 ?>
-
+ <div> <a href="readAutoridad.php">Regresar</a></div>
 
 
 </aside>

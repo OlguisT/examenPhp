@@ -55,7 +55,7 @@ echo "<form method= 'POST' class='form-horizontal' action= 'nuevoTipoAutoridad.p
      echo "</div>";
 echo "</form>";
 ?>
-
+ <div> <a href="readTipoAutoridad.php">Regresar</a></div> 
 
 
 </aside>

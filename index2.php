@@ -24,7 +24,7 @@ session_start();
 	<link rel="stylesheet" type="text/css" href="css/flexslider.css" media="screen">
 	<link rel="stylesheet" type="text/css" href="css/style.css" media="screen">
 	<link rel="stylesheet" type="text/css" href="css/responsive.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap-layout.css" media="screen">
+    <!-- <link rel="stylesheet" type="text/css" href="css/bootstrap-layout.css" media="screen"> -->
 </head>
 <body>
 
@@ -51,12 +51,12 @@ session_start();
 			<div class="menu-box">
 				<ul class="menu">
 					<li><a class="active" href="#"><span>Inicio</span></a></li>
-					<li><a href="about.html"><span>Quienes Somos</span></a></li>
-					<li><a href="services.html"><span>Categorias</span></a></li>
+					<li><a href="about2.php"><span>Quienes Somos</span></a></li>
+					<li><a href="services2.php"><span>Categorias</span></a></li>
 					
 				<!--	<li><a href="single-post.html"><span>Single Post</span></a></li> -->
-					<li><a href="formularioDenuncia.html"><span>Nueva Denuncia</span></a></li>
-					<li><a href="contact.html"><span>Contáctenos</span></a></li>
+					<li><a href="formularioDenuncia2.php"><span>Nueva Denuncia</span></a></li>
+					<li><a href="contact2.php"><span>Contáctenos</span></a></li>
 					<li><a href="#"><span>
 							<?php
 
@@ -75,7 +75,7 @@ session_start();
 
 							?>
 					</span></a></li>
-					<li><a href="#"><span>Cerrar Sesion</span></a></li>
+					<li><a href="admin/salir.php"><span>Cerrar Sesion</span></a></li>
 				</ul>					
 			</div>
 
@@ -332,7 +332,7 @@ session_start();
 	<script type="text/javascript" src="js/retina-1.1.0.min.js"></script>
 	<script type="text/javascript" src="js/jquery.nicescroll.min.js"></script>
 	<script type="text/javascript" src="js/script.js"></script>
-    <script type="text/javascript" src=".js/bootstrap-layout.js"></script>
+    <!-- <script type="text/javascript" src=".js/bootstrap-layout.js"></script> -->
 
 
 </body>

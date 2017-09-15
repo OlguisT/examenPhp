@@ -12,36 +12,6 @@ session_start();
 <link rel="stylesheet" type="text/css" href="../css/admin.css" media="screen">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<style type="text/css">
-
-body{
-    text-align: center;
-}
-.logo{
-    width: 200px;
-}
-
-h1{
-    width: 100%;
-}
-#contenedor {
-    display: table;
-    text-align: center;
-    margin: 0 auto;
-}
-
-#contenidos {
-    display: table-row;
-}
-#columna1, #columna2, #columna3, #columna4, #columna5 {
-    display: table-cell;
-    border: 1px solid #000;
-    vertical-align: middle;
-    padding: 10px;
-}
-</style>
-
-
 </head>
 <body>
 
@@ -51,18 +21,14 @@ h1{
     echo "<div class='container-fluid'>";
     echo "<div class='navbar-header'><a class='navbar-brand' >Tu voz Ciudadana</a></div>";
     echo " <ul class='nav navbar-nav navbar-right'>";
-    echo "<li><a href='#'>Hola Usuario : (" . $_SESSION ['MiSession'] . ")</a></li>";
-    //echo "<li><a href='#''><span class='glyphicon glyphicon-user'></span> $usuario</a></li>";
+    echo "<li><a href='#'>Hola Usuario : (" . $_SESSION ['MiSession'] . ")</a></li>";   
     echo "<li><a href='salir.php''><span class='glyphicon glyphicon-log-in'></span> Salir</a></li>";
     echo "</ul>";
     echo "</div>";
     echo "</nav>";
-
- 
     
     echo "<img class='logo' src=\"../images/service.svg\">"; 
-    echo "<h1>Tu voz ciudadana</h1>";
-    
+    echo "<h1 class='tituloMain'>Tu voz ciudadana</h1>";   
    
     echo "<div id='contenedor'>";
 
@@ -88,15 +54,6 @@ h1{
     echo "</div>";
 
     echo "</div>";
-
- 
-  
-//<img src='../images/user.svg'>
-  
-  
-
-
-
 ?>
 
 

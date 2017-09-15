@@ -31,7 +31,7 @@ session_start();
     echo " <ul class='nav navbar-nav'>";
 		      	echo "<li><a href='readsupremo.php'>Menú</a></li>";
 			echo "<li><a href='newUsuario.php'>Nuevo</a></li>";
-      echo "<li><a href='readUsuario.php'>Consulta</a></li>";
+      echo "<li><a href='../readUsuario.php'>Consulta</a></li>";
 		echo "</ul>";
     echo " <ul class='nav navbar-nav navbar-right'>";
     echo "<li><a href='#'>Hola Usuario : (" . $_SESSION ['MiSession'] . ")</a></li>";
@@ -60,6 +60,7 @@ echo "  </div>";
 echo "</div>";
 ?>
 
+<div> <a href="readUsuario.php">Regresar</a></div>
 
 </aside>
 </body>

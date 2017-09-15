@@ -2170,3 +2170,16 @@ ul.depth li:before {
 }
 
 
+
+.espacio{
+position:relative;
+top:1em;
+}
+
+
+#fotoDenu{
+text-decoration:none;
+}
+
+
+

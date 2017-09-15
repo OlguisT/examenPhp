@@ -94,7 +94,7 @@ echo "<option selected></option>";
      echo "</div>";
 echo "</form>";
 ?>
-
+<div> <a href="readComentario.php">Regresar</a></div>
 
 
 </aside>

@@ -30,7 +30,7 @@ if($row = pg_fetch_array($result)){
  if($row['tipousuario'] == 1){
 	header("location: login.php");
  }else{
-	header("location: ../../index2.php");
+	header("location: ../index2.php");
  }
 	
 	

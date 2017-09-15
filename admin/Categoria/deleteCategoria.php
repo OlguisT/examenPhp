@@ -56,7 +56,7 @@ echo "<br>";
 ?>
 
 <div class="text-fieldsl">
-         <a href='index.php'>Volver al inicio</a>                                    
+        <div> <a href="readCategoria.php">Regresar</a></div>
 </div>
 
 </aside>

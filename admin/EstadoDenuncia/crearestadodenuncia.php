@@ -54,6 +54,7 @@ echo "<form method= 'POST' class='form-horizontal' action= 'nuevoestadodenuncia.
      echo "</div>";
 echo "</form>";
 ?>
+<div> <a href="readEstadoDenuncia.php">Regresar</a></div>
 
 
 

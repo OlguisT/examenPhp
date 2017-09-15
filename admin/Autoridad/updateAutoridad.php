@@ -115,6 +115,7 @@ $ObjAutoridad=$AutoridadCollectorObj->showAutoridad($id);
         </div>
      </div>
      <div class="form-group">
+     <div> <a href="readAutoridad.php">Regresar</a></div>
          <div class="col-xs-offset-2 col-xs-10">
              <button type="submit" class="btn btn-primary">Grabar</button>
          </div>

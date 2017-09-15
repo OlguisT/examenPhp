@@ -63,6 +63,7 @@ echo "Edicion en proceso . . . . </br>";
          </div>
      </div>
      <div class="form-group">
+      <div> <a href="readTipoAutoridad.php">Regresar</a></div> 
          <div class="col-xs-offset-2 col-xs-10">
              <button type="submit" class="btn btn-primary">Grabar</button>
          </div>

@@ -61,7 +61,7 @@ echo "    <div class='panel-body'>".$nombre." ".$apellido."</div>";
 echo "  </div>";
 echo "</div>";
 ?>
-
+<div> <a href="readDenunciante.php">Regresar</a></div>
 
 </aside>
 </body>

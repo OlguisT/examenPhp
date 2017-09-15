@@ -20,6 +20,7 @@
 	<link rel="stylesheet" type="text/css" href="css/flexslider.css" media="screen">
 	<link rel="stylesheet" type="text/css" href="css/style.css" media="screen">
 	<link rel="stylesheet" type="text/css" href="css/responsive.css" media="screen">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-layout.css" media="screen">
 	
 </head>
 <body>
@@ -50,7 +51,15 @@
 				<ul class="menu">
 					<li><a class="active" href="index.html"><span>Inicio</span></a></li>
 					<li><a href="about.html"><span>Quienes Somos</span></a></li>
-					<li><a href="services.html"><span>Categorias</span></a></li>
+					<li ><a href="#" data-toggle="sidebar-collapse"><span>Categorías</span></a>
+                        <ul class="sidebar-submenu">
+                            <li class="sidebar-menu-item"><a href="index.html" class="sidebar-menu-button">Ver Todas</a></li>
+                        <li class="sidebar-menu-item"><a href="blog.html" class="sidebar-menu-button">Robos</a></li>
+                        <li class="sidebar-menu-item"><a href="blog.html" class="sidebar-menu-button">Accidentes</a></li>
+                            <li class="sidebar-menu-item"><a href="blog.html" class="sidebar-menu-button">Malos Servicios</a></li>
+                        <li class="sidebar-menu-item"><a href="blog.html" class="sidebar-menu-button">Calles Destruidas</a></li>
+    </ul>                             
+                    </li>
 					<li><a href="login.html"><span>Iniciar Sesión</span></a></li>
 				<!--	<li><a href="single-post.html"><span>Single Post</span></a></li> -->
 					<li><a href="formularioDenuncia.html"><span>Nueva Denuncia</span></a></li>
@@ -187,6 +196,6 @@
 	<script type="text/javascript" src="js/retina-1.1.0.min.js"></script>
 	<script type="text/javascript" src="js/jquery.nicescroll.min.js"></script>
 	<script type="text/javascript" src="js/script.js"></script>
-
+<script type="text/javascript" src="js/bootstrap-layout.js"></script>
 </body>
 </html>

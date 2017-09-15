@@ -47,7 +47,7 @@ echo "valor id: ".htmlspecialchars($id)." ha sido eliminado correctamente </br>"
 ?>
 
 <div class="text-fieldsl">
-         <a href='index.php'>Volver al inicio</a>                                    
+         <a href='readComentario.php'>Volver al inicio</a>                                    
 </div>
 
 </aside>
