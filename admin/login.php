@@ -60,14 +60,6 @@ echo '<script>window.location.href = "index.php";</script>';
 
 
 
-<section id="main">
-<center>
-<div class='mensajeDestroy'>
-Bienvenido Usuario Administrador<br/>
-</div>
-<a class='enlaceVolver' href="readsupremo.php">Menu</a>
-</center>
-</section>
 </body>
 </html>
 

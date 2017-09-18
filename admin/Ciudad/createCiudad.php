@@ -43,8 +43,8 @@ $ProvinciaCollectorObj = new ProvinciaCollector();
          echo "</div>";
      echo "</div>";
 
-echo "<div class='form-group'>";
-      
+
+echo "<div class='form-group'>";     
 
 echo "<label for='inputName' class='control-label col-xs-2'>Provincia:</label>";
          echo "<div class='col-xs-10'>";
@@ -58,6 +58,13 @@ echo "<option value='".$c->getIdProvincia()."'>".$c->getNombre()."</option>";
          echo "</div>";
      echo "</div>";
 
+echo "<div class='form-group'>";
+         echo "<label for='inputName' class='control-label col-xs-2'>numHabitantes:</label>";
+         echo "<div class='col-xs-10'>";
+             echo "<input name='numhab' type='text' id= 'numhab' class='form-control' placeholder='numhab'>";
+         echo "</div>";
+     echo "</div>";
+
 
      echo "<div class='form-group'>";
          echo "<div class='col-xs-offset-2 col-xs-10'>";
@@ -65,6 +72,8 @@ echo "<option value='".$c->getIdProvincia()."'>".$c->getNombre()."</option>";
          echo "</div>";
      echo "</div>";
 echo "</form>";
+
+ 
  
 ?>
 

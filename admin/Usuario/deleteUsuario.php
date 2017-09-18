@@ -53,7 +53,7 @@ echo "<br>";
 	echo "  </div>";
 	echo "</div>";
 ?>
-<div> <a href="readUsuario.php">Regresar</a></div>
+
 <div class="text-fieldsl">
                                         
 </div>

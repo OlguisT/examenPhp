@@ -83,7 +83,6 @@ echo "<option value='".$c->getIdUsuario()."'>".$c->getUsuario()."</option>";
 
       
      <div class="form-group">
-     <div> <a href="readDenunciante.php">Regresar</a></div>
          <div class="col-xs-offset-2 col-xs-10">
              <button type="submit" class="btn btn-primary">Grabar</button>
          </div>

@@ -33,12 +33,8 @@ echo "</div>";
 echo "</nav>";
 
 $id=$_GET['id'];
-// $nombre=$_GET['nombre'];
-include_once("ParroquiaCollector.php");
-include_once("Parroquia.php");
-$ParroquiaCollectorObj= new ParroquiaCollector();
-$ObjParroquia=$ParroquiaCollectorObj->showParroquia($id);
-
+$nombre=$_GET['nombre'];
+$idciudad=$_GET['idciudad'];
 ?>
 
 <form method= "POST" class="form-horizontal" action= "guardarParroquia.php" >
@@ -50,7 +46,7 @@ $ObjParroquia=$ParroquiaCollectorObj->showParroquia($id);
      <div class="form-group">
          <label for="inputName" class="control-label col-xs-2">Nombre:</label>
          <div class="col-xs-10">
-           <input name = "Nombre" type="text" id= "Nombre" class="form-control" placeholder="Nombre" value="<?php echo $ObjParroquia->getNombre();?>">
+           <input name = "Nombre" type="text" id= "Nombre" class="form-control" placeholder="Nombre" value="<?php echo $nombre;?>">
          </div>
      </div>
 
@@ -64,12 +60,15 @@ $ObjParroquia=$ParroquiaCollectorObj->showParroquia($id);
 <?php
 include_once("../Ciudad/CiudadCollector.php"); //llamar el collector de la otra tabla
 $CiudadCollectorObj = new CiudadCollector(); 
+
 foreach ($CiudadCollectorObj->showCiudades() as $c){
-if($c->getIdCiudad()==$ObjParroquia->getIdCiudad()){
-echo "<option value='".$c->getIdCiudad()."' selected>".$c->getNombre()."</option>";
-}else{
+if ($idciudad==$c->getIdCiudad()){
+echo "<option value='".$idciudad."' selected>".$c->getNombre()."</option>"; //Se añade una nueva provincia a la lista
+}
+else{ 
 echo "<option value='".$c->getIdCiudad()."'>".$c->getNombre()."</option>"; 
-}}
+}
+}
 ?>
 	     </select>
          </div>

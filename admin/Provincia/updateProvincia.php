@@ -55,7 +55,7 @@ $nombre=$_GET['nombre'];
              <button type="submit" class="btn btn-primary">Grabar</button>
          </div>
      </div>
-     <div> <a href="readProvincia.php">Cancelar</a></div>
+     <div> <a href="readProvincia.php">Regresar</a></div>
 </form>
 
 </aside>

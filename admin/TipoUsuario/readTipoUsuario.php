@@ -72,7 +72,6 @@ echo "</div>";
 echo "</div>";
 
 ?>
-
 </aside>
 </body>
 </html>

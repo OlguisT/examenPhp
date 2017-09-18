@@ -46,6 +46,7 @@ echo "<tr>";
 echo "<th>Código</th>"; 
 echo "<th>Nombre</th>";  
 echo "<th>Provincia</th>"; 
+echo "<th>NumHab</th>"; 
 echo "</tr>"; 
 echo "</thead>";
 
@@ -54,10 +55,11 @@ foreach ($CiudadCollectorObj->showCiudades() as $c){
 echo "<tbody>"; 
 echo "<tr>"; 
 echo "<td>".$c->getIdCiudad()."</td>"; 
-
 echo "<td>".$c->getNombre()."</td>";
 echo "<td>".$c->getIdProvincia()."</td>";
-echo "<td><a href='updateCiudad.php?id=".$c->getIdCiudad()."&nombre=".$c->getNombre()."'>Editar</a></td>"; 
+echo "<td>".$c->getNumHab()."</td>";
+
+echo "<td><a href='updateCiudad.php?id=".$c->getIdCiudad()."&nombre=".$c->getNombre()."&numhab=".$c->getNumHab()."&idprovincia=".$c->getIdProvincia()."'>Editar</a></td>"; 
 echo "<td><a href='deleteCiudad.php?id=".$c->getIdCiudad()."&nombre=".$c->getNombre()."'>Eliminar</a></td>"; 
 echo "</tr>"; 
 }

@@ -39,6 +39,8 @@ session_start();
 $id=$_GET['id'];
 $no=$_GET['nombre'];
 
+
+
 include_once("CiudadCollector.php");
 $ciudadCollectorObj= new CiudadCollector();
 $ciudadCollectorObj->deleteCiudad($id);

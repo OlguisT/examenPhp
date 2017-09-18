@@ -103,7 +103,7 @@ echo "<option value='".$c->getIdDenunciante()."'>".$c->getNombre()."</option>";
              <button type="submit" class="btn btn-primary">Grabar</button>
          </div>
      </div>
-     <div> <a href="readComentario.php">Regresar</a></div>
+     <div> <a href="readCiudad.php">Regresar</a></div>
 </form>
 
 </aside>

@@ -4,8 +4,8 @@
 //AQUI CONECTAMOS A LA BASE DE DATOS DE POSTGRES
 
 //$conex = "host=localhost port=5432 dbname=comunidad user=postgres password=postgres";
-$conex = "host=ec2-54-163-230-219.compute-1.amazonaws.com port=5432 dbname=d3t4fru243rnhu user=heahzkoxtvgywg password=9cda6d4a2dcbb92898bf6e6d02851b6466704dada75dba50a195fbfc85cc8a53";
-//$user="obihwaohfkvyyt password=ea5858855a8a07277db5887f17e8080c0467704a2ec10342e726c561461b5352";
+$conex = "host=ec2-54-163-230-219.compute-1.amazonaws.com port=5432 dbname=dftgqjbnucrk1o user=pgmfrjwdtzjwrp password=2d72d0f3411301ef353eb28da736b72321048f7e4f6c53ff984af71813879f3b";
+//$user="heahzkoxtvgywg password=ea5858855a8a07277db5887f17e8080c0467704a2ec10342e726c561461b5352";
 $cnx = pg_connect($conex) or die ("<h1>Error de conexion.</h1> ". pg_last_error());
 session_start();
 
@@ -30,7 +30,7 @@ if($row = pg_fetch_array($result)){
  if($row['tipousuario'] == 1){
 	header("location: login.php");
  }else{
-	header("location: ../index2.php");
+	header("location: ../../index2.php");
  }
 	
 	

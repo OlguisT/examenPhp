@@ -57,7 +57,7 @@ echo "  </div>";
 echo "</div>";
 ?>
 
-<div> <a href="readComentario.php">Regresar</a></div>
+
 </aside>
 </body>
 </html>

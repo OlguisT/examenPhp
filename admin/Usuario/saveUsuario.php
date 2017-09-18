@@ -60,7 +60,6 @@ echo "  </div>";
 echo "</div>";
 ?>
 
-<div> <a href="readUsuario.php">Regresar</a></div>
 
 </aside>
 </body>

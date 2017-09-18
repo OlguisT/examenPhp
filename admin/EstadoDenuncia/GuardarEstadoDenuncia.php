@@ -61,7 +61,6 @@ echo "</div>";
 
 
 ?>
-<div> <a href="readEstadoDenuncia.php">Regresar</a></div>
 </aside>
 </body>
 </html>

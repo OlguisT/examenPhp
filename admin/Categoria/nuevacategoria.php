@@ -57,7 +57,7 @@ echo "    <div class='panel-body'>$nombre</div>";
 echo "  </div>";
 echo "</div>";
 ?>
-<div> <a href="readCategoria.php">Regresar</a></div>
+
 
 </aside>
 </body>

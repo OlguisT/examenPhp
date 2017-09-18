@@ -58,7 +58,7 @@ echo "<form method= 'POST' class='form-horizontal' action= 'nuevacategoria.php' 
 echo "</form>";
 ?>
 
-<div> <a href="readCategoria.php">Regresar</a></div>
+
 
 </aside>
 </body>

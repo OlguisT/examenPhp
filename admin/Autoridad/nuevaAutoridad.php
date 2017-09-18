@@ -62,7 +62,7 @@ echo "    <div class='panel-body'><a href='readAutoridad.php'>Regresar</a></div>
 echo "   </div>";
 echo "</div>";
 ?>
- <div> <a href="readAutoridad.php">Regresar</a></div>
+
 
 </aside>
 </body>

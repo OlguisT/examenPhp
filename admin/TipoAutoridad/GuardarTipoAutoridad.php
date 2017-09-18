@@ -62,7 +62,6 @@ echo "</div>";
 
 
 ?>
- <div> <a href="readTipoAutoridad.php">Regresar</a></div> 
 </aside>
 </body>
 </html>
