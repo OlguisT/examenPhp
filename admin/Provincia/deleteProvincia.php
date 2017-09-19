@@ -40,7 +40,7 @@ if (isset($_SESSION['MiSession'])){
  echo "</nav>";
 
 $id=$_GET['id'];
-$no=$_GET['nombre'];
+$nombre=$_GET['nombre'];
 
 include_once("ProvinciaCollector.php");
 $ProvinciaCollectorObj= new ProvinciaCollector();
