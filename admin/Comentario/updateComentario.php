@@ -14,6 +14,9 @@ session_start();
 <link href="../../css/tablas.css" rel="stylesheet" >
 </head>
 <body>
+<?php
+if (isset($_SESSION['MiSession'])){
+    ?>
 
 <aside>
 <?php
@@ -50,7 +53,7 @@ $ObjComentario=$ComentarioCollectorObj->showComentario($id);
      <div class="form-group">
          <label for="inputName" class="control-label col-xs-2">descripcion:</label>
          <div class="col-xs-10">
-           <input name = "descripccion" type="text" id= "descripccion" class="form-control" placeholder="Descripcion" value="<?php echo $descripccion;?>">
+           <input name = "descripccion" type="text" id= "descripccion" class="form-control" placeholder="Descripcion" value="<?php echo $descripccion;?>" required>
          </div>
      </div>
 
@@ -103,9 +106,20 @@ echo "<option value='".$c->getIdDenunciante()."'>".$c->getNombre()."</option>";
              <button type="submit" class="btn btn-primary">Grabar</button>
          </div>
      </div>
-     <div> <a href="readCiudad.php">Regresar</a></div>
+     <div> <a href="readComentario.php">Regresar</a></div>
 </form>
 
 </aside>
+
+<?php
+
+}
+
+    
+    else {
+       // echo "permiso denegado";
+        echo"<a href='../index.php'>iniciar sesion</a>";
+    }
+ ?>
 </body>
 </html>

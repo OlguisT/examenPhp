@@ -17,6 +17,9 @@ session_start();
 <header>
 
 </header>
+<?php
+if (isset($_SESSION['MiSession'])){
+    ?>
 <section>
 </section>
 <section>
@@ -57,8 +60,17 @@ echo "    <div class='panel-body'>$tipo</div>";
 echo "  </div>";
 echo "</div>";
 ?>
-
+<div> <a href="readTipoUsuario.php">Regresar</a></div>
 
 </aside>
+<?php
+
+}
+    
+    else {
+       echo "permiso denegado";
+       echo"<a href='../index.php'>Inicia sesion</a>";
+    }
+ ?>
 </body>
 </html>

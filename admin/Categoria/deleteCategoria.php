@@ -14,6 +14,9 @@ session_start();
    <link href="../../css/tablas.css" rel="stylesheet" >
 	</head>
 <body>
+<?php
+if (isset($_SESSION['MiSession'])){
+    ?>
 
 <section>
 </section>
@@ -56,9 +59,19 @@ echo "<br>";
 ?>
 
 <div class="text-fieldsl">
-         <a href='index.php'>Volver al inicio</a>                                    
+        <div> <a href="readCategoria.php">Regresar</a></div>
 </div>
 
 </aside>
+<?php
+
+}
+
+    
+    else {
+       echo "permiso denegado";
+       echo"<a href='../index.php'>inicia sesion</a>";
+    }
+ ?>
 </body>
 </html>

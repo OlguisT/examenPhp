@@ -15,7 +15,15 @@ session_start();
 </head>
 <body>
 
+<header>
+
+</header>
+<?php
+if (isset($_SESSION['MiSession'])){
+?>
+
 <aside>
+
 <?php
 
 echo "<nav class='navbar navbar-default'>";
@@ -34,33 +42,24 @@ echo "</nav>";
 
 $id=$_GET['id'];
 $nombre=$_GET['nombre'];
-$numhab=$_GET['numhab'];
 $idprovincia=$_GET['idprovincia'];
-
-//include_once("CiudadCollector.php");
-//include_once("Ciudad.php");
-//$CiudadCollectorObj= new CiudadCollector();
-//$ObjCiudad=$CiudadCollectorObj->showCiudad($id);
-
 ?>
 
 <form method= "POST" class="form-horizontal" action= "guardarCiudad.php?usuario=" >
-
 <div class="form-group">
 <label for="inputName" class="control-label col-xs-2">Código:</label>
 <div class="col-xs-10">
 <input name ="Codigo" type="text" value="<?php echo $id;?>" readonly></div>
 </div>
-
      <div class="form-group">
          <label for="inputName" class="control-label col-xs-2">Nombre:</label>
          <div class="col-xs-10">
-           <input name = "Nombre" type="text" id= "Nombre" class="form-control" placeholder="Nombre" value="<?php echo $nombre;?>">
+           <input name = "Nombre" type="text" id= "Nombre" class="form-control" placeholder="Nombre" value="<?php echo $nombre;?>" required>
          </div>
      </div>
 
-
-<div class='form-group'>      
+<div class='form-group'>
+      
 
 <label for='inputName' class='control-label col-xs-2'>Provincia:</label>
          <div class='col-xs-10'>
@@ -69,36 +68,18 @@ $idprovincia=$_GET['idprovincia'];
 <?php
 include_once("../Provincia/ProvinciaCollector.php"); //llamar el collector de la otra tabla
 $ProvinciaCollectorObj = new ProvinciaCollector(); 
-//foreach ($ProvinciaCollectorObj->showProvincias() as $c){
-//if($c->getIdProvincia()==$ObjCiudad->getIdProvincia()){
-//echo "<option value='".$c->getIdProvincia()."' selected>".$c->getNombre()."</option>";
-//}else{
-//echo "<option value='".$c->getIdProvincia()."'>".$c->getNombre()."</option>"; 
-//}
-//}
-
-
 foreach ($ProvinciaCollectorObj->showProvincias() as $c){
-
 if ($idprovincia==$c->getIdProvincia()){
 echo "<option value='".$idprovincia."' selected>".$c->getNombre()."</option>"; //Se añade una nueva provincia a la lista
 }
 else{ 
 echo "<option value='".$c->getIdProvincia()."'>".$c->getNombre()."</option>"; 
 }
-
 }
 ?>
 	     </select>
          </div>
      </div>
- 
-<div class="form-group">
-         <label for="inputName" class="control-label col-xs-2">numHab:</label>
-         <div class="col-xs-10">
-      <input name ="numhab" type="text" id= "numhab" class="form-control" placeholder="numhab" value="<?php echo $numhab;?>">
-         </div>
-</div>
 
      <div class="form-group">
          <div class="col-xs-offset-2 col-xs-10">
@@ -109,5 +90,16 @@ echo "<option value='".$c->getIdProvincia()."'>".$c->getNombre()."</option>";
 </form>
 
 </aside>
+
+<?php
+}   
+    else {
+echo "<center>";
+    echo "<h1>PERMISO DENEGADO</h1>";
+    echo "<br>";
+    echo"<a href='../index.php'><h1>Iniciar Sesión</h1></a>";
+echo "</center>";
+    }
+?>
 </body>
 </html>

@@ -5,16 +5,23 @@ class Ciudad
     private $idciudad;
     private $nombre;
     private $idprovincia; 
-    private $numhab; 
     
-     function __construct($idciudad, $nombre,$idprovincia,$numhab) {
+     function __construct($idciudad, $nombre,$idprovincia) {
        $this->idciudad = $idciudad;
        $this->nombre = $nombre;
-       $this->idprovincia = $idprovincia;  
-       $this->numhab= $numhab;   
+       $this->idprovincia = $idprovincia;   
      }
      
-     
+     // function __construct($idciudad,$nombre) {
+     //   $this->idciudad = $idciudad;
+     //   $this->nombre = $nombre;       
+     // }
+
+     // function __construct() {
+     //      $this->idciudad = $idciudad;
+     //   $this->nombre = $nombre;   
+     // }
+    
      function setIdCiudad($idciudad){
        $this->idciudad = $idciudad;
      } 
@@ -34,14 +41,6 @@ class Ciudad
 
      function getIdProvincia(){
        return $this->idprovincia;
-     } 
-
-     function setNumHab($numhab){
-       $this->numhab=$numhab;
-     } 
-
-     function getNumHab(){
-       return $this->numhab;
      } 
      
 }

@@ -14,7 +14,9 @@ session_start();
    <link href="../../css/tablas.css" rel="stylesheet" >
 	</head>
 <body>
-
+<?php
+if (isset($_SESSION['MiSession'])){
+    ?>
 <section>
 </section>
 <section>
@@ -48,7 +50,7 @@ echo "<nav class='navbar navbar-default'>";
      <div class="form-group">
          <label for="inputName" class="control-label col-xs-2">Titulo:</label>
          <div class="col-xs-10">
-             <input name = "titulo" type="text" id= "Titulo" class="form-control" placeholder="Titulo"  />
+             <input name = "titulo" type="text" id= "Titulo" class="form-control" placeholder="Titulo"  required/>
          </div>
      </div>
 
@@ -56,21 +58,21 @@ echo "<nav class='navbar navbar-default'>";
          <label for="inputName" class="control-label col-xs-2">Descripcion:</label>
          <div class="col-xs-10">
 <textarea name="descripcion" id= "descripcion"
-   rows="5" cols="50">Escriba la descripcion de la denuncia</textarea>
+   rows="5" cols="50" placeholder="Escriba la descripcion de la denuncia..." required></textarea>
    </div>
      </div>
 
       <div class="form-group">
          <label for="inputName" class="control-label col-xs-2">Fecha Publicacion:</label>
          <div class="col-xs-10">
-             <input name = "fecha_publicacion" type="date" id= "fecha_publicacion" class="form-control" placeholder="fecha" />
+             <input name = "fecha_publicacion" type="date" id= "fecha_publicacion" step="1" min="2017-01-01" max="2017-12-31" class="form-control" placeholder="fecha" />
                       </div>
      </div>
 
         <div class="form-group">
          <label for="inputName" class="control-label col-xs-2">Fecha Ejecucion:</label>
          <div class="col-xs-10">
-             <input name = "fecha_ejecucion" type="date" id= "fecha_ejecucion" step="1" min="2013-01-01" max="2013-12-31" class="form-control" placeholder="fecha"/>
+             <input name = "fecha_ejecucion" type="date" id= "fecha_ejecucion" step="2" min="2017-01-01" max="2017-12-31" class="form-control" placeholder="fecha"/>
                       </div>
      </div>
 <!-- ****************************************Combo Box Denunciante************************************************** -->
@@ -199,6 +201,7 @@ echo "<option value='".$c->getIdAutoridad()."'>".$c->getNombre()."</option>";
 
 
      <div class="form-group">
+     <div> <a href="readDenuncia.php">Regresar</a></div>
          <div class="col-xs-offset-2 col-xs-10">
              <button name="btnGuardar" type="submit" class="btn btn-primary">Grabar</button>
          </div>
@@ -208,7 +211,18 @@ echo "<option value='".$c->getIdAutoridad()."'>".$c->getNombre()."</option>";
 
 
 </aside>
+<?php
+
+}
+
+    
+    else {
+       echo "permiso denegado";
+       echo"<a href='../index.php'>inicia sesion</a>";
+    }
+ ?>
 </body>
+
 </html>
 <?php
 if (isset($_POST['btnGuardar'])){

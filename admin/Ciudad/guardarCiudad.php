@@ -18,6 +18,10 @@ session_start();
 
 </header>
 
+<?php
+if (isset($_SESSION['MiSession'])){
+?>
+
 <aside>
 <?php
 
@@ -39,12 +43,10 @@ echo "</nav>";
 $id =$_POST['Codigo'];
 $nombre =$_POST['Nombre'];
 $idprovincia=$_POST['idprovincia'];
-$numhab=$_POST['numhab'];
-
 
 include_once("CiudadCollector.php");
 $CiudadCollectorObj = new CiudadCollector();
-$CiudadCollectorObj->updateCiudad($id,$nombre,$idprovincia,$numhab);
+$CiudadCollectorObj->updateCiudad($id,$nombre,$idprovincia);
 
 echo "<br>";
 echo "<div class='container'>";
@@ -59,5 +61,16 @@ echo "</div>";
   <a href='readCiudad.php'>Regresar</a>                                          
 </div>
 </aside>
+
+<?php
+}   
+    else {
+echo "<center>";
+    echo "<h1>PERMISO DENEGADO</h1>";
+    echo "<br>";
+    echo"<a href='../index.php'><h1>Iniciar Sesión</h1></a>";
+echo "</center>";
+    }
+?>
 </body>
 </html>

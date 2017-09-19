@@ -17,6 +17,9 @@ session_start();
 <header>
 
 </header>
+<?php
+if (isset($_SESSION['MiSession'])){
+    ?>
 <section>
 </section>
 <section>
@@ -48,10 +51,11 @@ session_start();
      <div class="form-group">
          <label for="inputName" class="control-label col-xs-2">Tipo:</label>
          <div class="col-xs-10">
-             <input name = "tipo" type="text" id= "tipo" class="form-control" placeholder="Tipo" />
+             <input name = "tipo" type="text" id= "tipo" class="form-control" placeholder="Tipo" required/>
          </div>
      </div>
      <div class="form-group">
+     <div> <a href="readTipoUsuario.php">Regresar</a></div>
          <div class="col-xs-offset-2 col-xs-10">
              <button type="submit" class="btn btn-primary">Grabar</button>
          </div>
@@ -61,5 +65,14 @@ session_start();
 
 
 </aside>
+<?php
+
+}
+    
+    else {
+       echo "permiso denegado";
+       echo"<a href='../index.php'>Inicia sesion</a>";
+    }
+ ?>
 </body>
 </html>

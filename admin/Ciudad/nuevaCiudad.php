@@ -18,6 +18,11 @@ session_start();
 
 </header>
 
+<?php
+if (isset($_SESSION['MiSession'])){
+?>
+
+
 <aside>
 <?php
 
@@ -39,11 +44,10 @@ session_start();
 
 $nombre = $_POST['nombre'];
 $idprovincia=$_POST['idprovincia'];
-$numhab=$_POST['numhab'];
 
 include_once("CiudadCollector.php");
 $CiudadCollectorObj = new CiudadCollector();
-$CiudadCollectorObj->insertCiudad($nombre,$idprovincia,$numhab);
+$CiudadCollectorObj->insertCiudad($nombre,$idprovincia);
 
 echo "<br>";
 echo "<div class='container'>";
@@ -59,5 +63,16 @@ echo "</div>";
 </div>
 
 </aside>
+
+<?php
+}   
+    else {
+echo "<center>";
+    echo "<h1>PERMISO DENEGADO</h1>";
+    echo "<br>";
+    echo"<a href='../index.php'><h1>Iniciar Sesión</h1></a>";
+echo "</center>";
+    }
+?>
 </body>
 </html>

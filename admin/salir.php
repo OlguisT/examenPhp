@@ -27,7 +27,7 @@ echo "<img id='imgCierreSesion' src=\"../images/cierredesesion.jpg\">";
 echo "<div class='mensajeDestroy'>";
 echo "Se ha destruido exitosamente la sesión<br/>";
 echo "</div>";
-echo "<a class='enlaceVolver' href='index.php'>Volver</a>";
+echo "<a class='enlaceVolver' href='../index.html'>Volver</a>";
 }
 
 else{
@@ -35,7 +35,7 @@ echo "<div class='mensajeDestroy'>";
 echo "ERROR... <br/>";
 echo "</div>";
 
-echo "<a class='enlaceVolver' href='index.php'>Volver</a>";
+echo "<a class='enlaceVolver' href='../index.html'>Volver</a>";
 }
 
 ?>
