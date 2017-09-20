@@ -31,8 +31,8 @@ if (isset($_SESSION['MiSession'])){
  echo "<div class='navbar-header'><a class='navbar-brand'>Ciudad Creada</a></div>";
  echo "<ul class='nav navbar-nav'>";
  echo "<li><a href='../readsupremo.php'>Menú</a></li>";
- echo "<li><a href='createCiudad.php'>Nuevo</a></li>";
- echo "<li><a href='readCiudad.php'>Consultar</a></li>";
+ echo "<li><a href='createMonedas.php'>Nuevo</a></li>";
+ echo "<li><a href='readMonedas.php'>Consultar</a></li>";
  echo "</ul>";
  echo "<ul class='nav navbar-nav navbar-right'>";
  echo "<li><a href='#'>Hola:(" . $_SESSION ['MiSession'] . ")</a></li>";
@@ -45,9 +45,9 @@ if (isset($_SESSION['MiSession'])){
 $nombre = $_POST['nombre'];
 
 
-include_once("CiudadCollector.php");
-$CiudadCollectorObj = new CiudadCollector();
-$CiudadCollectorObj->insertCiudad($nombre);
+include_once("MonedaCollector.php");
+$MonedaCollectorObj = new MonedaCollector();
+$MonedaCollectorObj->insertMoneda($nombre);
 
 echo "<br>";
 echo "<div class='container'>";
@@ -59,7 +59,7 @@ echo "</div>";
 ?>
 
 <div class="text-fieldsl">
-  <a href='readCiudad.php'>Regresar</a>                                          
+  <a href='readMonedas.php'>Regresar</a>                                          
 </div>
 
 </aside>

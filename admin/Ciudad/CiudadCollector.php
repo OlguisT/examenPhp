@@ -10,7 +10,7 @@ function showCiudades() {
    $rows = self::$db->getRows("SELECT * FROM ciudad");       
    $arrayCiudad= array();        
     foreach ($rows as $c){
-      $aux = new Ciudad($c{'idciudad'},$c{'nombre'},$c{'idprovincia'});
+      $aux = new Ciudad($c{'idciudad'},$c{'nombre'});
       array_push($arrayCiudad, $aux);
     }
     return $arrayCiudad;        
@@ -18,12 +18,12 @@ function showCiudades() {
 
 function showCiudad($id) {
 $rows = self::$db->getRows("SELECT * FROM ciudad where idciudad= ? ", array ("{$id}"));        
-$ObjCiudad= new Ciudad($rows[0]{'idciudad'},$rows[0]{'nombre'},$rows[0]{'idprovincia'});
+$ObjCiudad= new Ciudad($rows[0]{'idciudad'},$rows[0]{'nombre'});
   return $ObjCiudad;        
 }
 
-function updateCiudad($id,$nombre,$idprovincia) {
- $insertrow = self::$db->updateRow("UPDATE public.ciudad SET nombre= ?, idprovincia= ? where idciudad= ? ", array ("{$nombre}","{$idprovincia}",$id));
+function updateCiudad($id,$nombre) {
+ $insertrow = self::$db->updateRow("UPDATE public.ciudad SET nombre= ? where idciudad= ? ", array ("{$nombre}",$id));
 
 }
 
@@ -31,8 +31,8 @@ function deleteCiudad($id) {
   $deleterow = self::$db->deleteRow("DELETE FROM public.ciudad where idciudad= ? ", array ("{$id}"));
 }
 
-function insertCiudad($nombre,$idprovincia) {
-  $rows = self::$db->insertRow("INSERT INTO public.ciudad(nombre,idprovincia) VALUES (?,?)", array ("{$nombre}","{$idprovincia}"));             
+function insertCiudad($nombre) {
+  $rows = self::$db->insertRow("INSERT INTO public.ciudad(nombre) VALUES (?,?)", array ("{$nombre}"));             
 }
 
 }

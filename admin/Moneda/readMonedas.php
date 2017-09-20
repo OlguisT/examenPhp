@@ -6,18 +6,17 @@ session_start();
 <html lang="es">
 <head>
 <meta charset ="utf-8">
-<title>Tabla Ciudad </title>
+<title>Tabla Ciudad</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<link href="../../css/tablas.css" rel="stylesheet" >
+<link href="../css/tablas.css" rel="stylesheet" >
 </head>
 <body>
 <header>
 
 </header>
-
 <?php
 if (isset($_SESSION['MiSession'])){
 ?>
@@ -27,11 +26,10 @@ if (isset($_SESSION['MiSession'])){
 
 echo "<nav class='navbar navbar-default'>";
 echo "<div class='container-fluid'>";
-echo "<div class='navbar-header'><a class='navbar-brand'>Guardar Ciudad</a></div>";
+echo "<div class='navbar-header'><a class='navbar-brand'>Leer Ciudad</a></div>";
 echo "<ul class='nav navbar-nav'>";
 echo "<li><a href='../readsupremo.php'>Menú</a></li>";
 echo "<li><a href='createCiudad.php'>Nuevo</a></li>";
-echo "<li><a href='readCiudad.php'>Consulta</a></li>";
 echo "</ul>";
 echo "<ul class='nav navbar-nav navbar-right'>";
 echo "<li><a href='#'>Hola:(" . $_SESSION ['MiSession'] . ")</a></li>";
@@ -40,26 +38,40 @@ echo "</ul>";
 echo "</div>";
 echo "</nav>";
 
-$id =$_POST['Codigo'];
-$nombre =$_POST['Nombre'];
+include_once("MonedaCollector.php");
+$MonedaCollectorObj = new MonedaCollector();
 
-
-include_once("CiudadCollector.php");
-$CiudadCollectorObj = new CiudadCollector();
-$CiudadCollectorObj->updateCiudad($id,$nombre);
-
-echo "<br>";
 echo "<div class='container'>";
-echo "<div class='panel panel-default'>";
-echo "<div class='panel-heading'>Registro Actualizado Correctamente</div>";
-echo "<div class='panel-body'>$nombre</div>";
+echo "<div class='table-responsive'>"; 
+echo "<table class='table'>"; 
+echo "<thead>"; 
+echo "<tr>"; 
+echo "<th>Código</th>"; 
+echo "<th>Nombre</th>";  
+echo "<th>Código_Ciudad</th>";
+
+echo "</tr>"; 
+echo "</thead>";
+
+foreach ($MonedaCollectorObj->showMonedas() as $c){
+
+echo "<tbody>"; 
+echo "<tr>"; 
+echo "<td>".$c->getIdMoneda()."</td>";
+echo "<td>".$c->getNombre()."</td>";
+echo "<td>".$c->getId_ciudad_fk()."</td>";
+
+
+echo "<td><a href='updateCiudad.php?id=".$c->getIdMoneda()."&nombre=".$c->getNombre()."&codigo=".$c->getId_ciudad_fk()."'>Editar</a></td>"; 
+echo "<td><a href='deleteCiudad.php?id=".$c->getIdMoneda()."&nombre=".$c->getNombre()."'>Eliminar</a></td>"; 
+echo "</tr>"; 
+}
+
+echo "</tbody>";
+echo "</table>";
 echo "</div>";
 echo "</div>";
 ?>
-
-<div class="text-fieldsl">
-  <a href='readCiudad.php'>Regresar</a>                                          
-</div>
 </aside>
 
 <?php

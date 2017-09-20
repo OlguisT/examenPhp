@@ -42,7 +42,7 @@ echo "</nav>";
 
 $id=$_GET['id'];
 $nombre=$_GET['nombre'];
-
+$idprovincia=$_GET['idprovincia'];
 ?>
 
 <form method= "POST" class="form-horizontal" action= "guardarCiudad.php?usuario=" >
@@ -58,9 +58,24 @@ $nombre=$_GET['nombre'];
          </div>
      </div>
 
-<div class='form-group'>     
+<div class='form-group'>
+      
 
-
+<label for='inputName' class='control-label col-xs-2'>Provincia:</label>
+         <div class='col-xs-10'>
+             <select name='idprovincia'  id= 'idprovincia' class='form-control' required>
+		
+<?php
+include_once("../Provincia/ProvinciaCollector.php"); //llamar el collector de la otra tabla
+$ProvinciaCollectorObj = new ProvinciaCollector(); 
+foreach ($ProvinciaCollectorObj->showProvincias() as $c){
+if ($idprovincia==$c->getIdProvincia()){
+echo "<option value='".$idprovincia."' selected>".$c->getNombre()."</option>"; //Se añade una nueva provincia a la lista
+}
+else{ 
+echo "<option value='".$c->getIdProvincia()."'>".$c->getNombre()."</option>"; 
+}
+}
 ?>
 	     </select>
          </div>
